@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="30x30" href="images/favicon-32x32.png">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="tip.css">
+</head>
+<body>
+    <section id="tip-background">
+        <div class="tip-title"> 
+            <img src="images/logo.svg" alt="">
+           </div>
+        <div class='tip-menu'>
+            <div id= "container">
+                <div class="tip-function">
+                    <form action="">
+                    <div class="bill">
+                        <p>Bill</p>
+                        <span id="errorBill" style="display:none;color:red;">Please provide bill</span>
+                        <div>
+                                <input type='text' name="totalBill" id="totalBill">
+                        </div>
+                    </div>
+                    <div class="selectper">
+                        <p><span>Select Tip %</span> <span id="errorRate" style="display: none;color:red;">please choose a rate</span></p>
+                        
+                        <div class='percentage'>
+                            <button value="5">5%</button>
+                            <button value="10">10%</button>
+                            <button value="15">15%</button>
+                
+                        
+                            <button value="25">25%</button>
+                            <button value="50">50%</button>
+
+                            <input type="text" name="custom" class="input-des" placeholder="Custom" id="custom">
+                                
+                        </div>
+                    </div>
+                    <div class="numPeople">
+                        <p> <span>Number of People</span> <span id="errorPeople" style="color: red;display: none;">Can't be empty</span></p>
+                            <div class='numbStyle'>
+                                <input type="text" name="numPeople" id="numPerson">
+                            </div>
+                    </div>
+                    </form>
+                </div>
+            <div class="tip-result">
+                    <div class="container">
+                        <div class="container-inner">
+                            <div class="tip-person">
+                            <span class="span-con">
+                                <span style="color: white;">Tip Amount</span>
+                                <small style="color: hsl(184, 14%, 56%);">/ person</small>
+                            </span>
+                            <span class="span-fig">
+                                <span>
+                                    $
+                                </span>
+                                <span class="perPersonTip" id="tipPerson">0.00</span>
+                            </span>
+                          </div>
+                        <div class="tip-total">
+                            <span class="span-con">
+                                <span style="color:white;">Total</span>
+                                <small style="color: hsl(184, 14%, 56%)">/ person</small>
+                            </span>
+                            <span class="span-fig">
+                                <span>
+                                    $
+                                </span>
+                                <span class="totalTip" id="tipTotal">0.00</span>
+                            </span>
+                        </div>
+                        <div class="reset">
+                            <button type="reset" class="resetBtn" id="reset">
+                                RESET
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+            
+    </section>
+    <script src="tip.js"></script>
+</body>
+</html>

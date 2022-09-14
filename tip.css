@@ -1,0 +1,236 @@
+* {
+  font-family: cursive;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section#tip-background {
+  background-color: hsl(185, 41%, 84%);
+  max-width: 1440px;
+  height: 100vh;
+  padding-bottom: 50px;
+}
+.tip-title {
+  width: 100%;
+  margin: auto auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.tip-title img {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.tip-menu {
+  background-color: #fff;
+  width: 80%;
+  margin: auto auto;
+  border-radius: 10px;
+}
+.tip-menu #container {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Tip function Style*/
+.tip-function {
+  width: 50%;
+}
+.tip-function p {
+  margin-bottom: 5px;
+}
+.tip-function form {
+  width: 100%;
+}
+.bill input[type="text"] {
+  width: 100%;
+  background-color: hsl(180, 4%, 95%);
+  background-image: url("images/icon-dollar.svg");
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 10px 10px 10px 40px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  outline: none;
+  text-align: right;
+}
+.bill input[type="text"]:focus {
+  border: 1px solid hsl(172, 67%, 45%);
+  text-align: right;
+  border-radius: 2px;
+}
+.tip-function .selectper {
+  width: 100%;
+}
+.tip-function .selectper p {
+  word-spacing: 10px;
+  padding-bottom: 5px;
+}
+
+.tip-function .percentage {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.percentage button , .percentage input[type="text"] {
+  width: 30%;
+  height: 50px;
+  background-color: hsl(183, 100%, 15%);
+  color: #fff;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: none;
+}
+
+.percentage button:hover {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  border: none;
+  cursor: pointer;
+}
+
+
+.percentage input[type="text"] {
+  display: block;
+  border: none;
+  outline: none;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(180, 4%, 95%);
+  text-align: right;
+}
+
+.percentage input[type="text"]:focus {
+  border: 1px solid hsl(172, 67%, 45%);
+  border-radius: 2px;
+}
+
+.percentage span form {
+  display: inline;
+}
+
+.numbStyle {
+  display: flex;
+  flex-direction: row;
+  background-color: hsl(180, 4%, 95%);
+  justify-content: space-between;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.numbStyle input[type="text"],
+.numbStyle input[type="text"]:focus {
+  width: 100%;
+  padding: 10px;
+  background-color: hsl(180, 4%, 95%);
+  background-image: url("images/icon-person.svg");
+  background-position: 15px 10px;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  text-align: right;
+}
+
+.numbStyle input[type="text"]:focus {
+  border-radius: 4px;
+  outline: 1px solid hsl(172, 67%, 45%);
+}
+
+.tip-result {
+  width: 50%;
+}
+
+.tip-result .container-inner {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  height: 100%;
+  background-color: hsl(183, 100%, 15%);
+  margin-left: 20px;
+  border-radius: 10px;
+}
+
+.tip-result .tip-person,
+.tip-result .tip-total,
+.tip-result .reset {
+  height: 30%;
+  margin-bottom: 50px;
+}
+
+.tip-result .reset {
+  margin-top: 40px;
+}
+
+
+.tip-person,
+.tip-total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.span-con {
+  display: flex;
+  flex-direction: column;
+}
+
+.span-fig {
+  color: hsl(172, 67%, 45%);
+  font-size: 30px;
+}
+
+.perPersonTip,
+.totalTip {
+  font-size: 30px;
+  color: hsl(172, 67%, 45%);
+}
+
+.tip-result .resetBtn {
+  width: 90%;
+  display: block;
+  padding: 7px;
+  background-color: hsl(183, 100%, 21%);
+  border: none;
+  border-radius: 4px;
+}
+
+.resetBtn:hover {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  cursor: pointer;
+}
+
+/* Mobile view*/
+
+@media screen and (max-width: 600px) {
+  .tip-menu #container {
+    flex-direction: column;
+  }
+  .tip-menu .tip-function,
+  .tip-menu .tip-result {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .tip-result .container-inner {
+    margin: auto 0;
+  }
+}
+
+#totalBill #numPerson #custom {
+  text-align: right;
+}
